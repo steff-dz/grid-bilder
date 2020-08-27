@@ -1,0 +1,56 @@
+
+
+main {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr) );
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+}
+
+main img {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+.row-2 {
+    grid-row: span 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Notes
+- Object-fit: cover propery will cover the whole "ruta"/box that it is in. So now (with an explicit height) it doesn't stretch out, but it is cut off.
+- Object-position: is also a property to move the pic to where you want (top, left top, center, etc)
+- SPAN to span a pic across, define a class that says how many columns an image will span over. LOOK AT .COL-2 selector. ADD A CLASS TO AN IMAGE FOR THAT.Then the picture selected will span over how many columns you want. But it does take over the second picture. 
+
+It can also span down over rows.Then your property is grid-row with a value of span #;
+
+** an element can have multiple classes! (check img 1)
+
+OTHER NOTES: the pictures sit in the center and cover the area because of the properties you used in main img. Those properties are object-fit and object-position.
+
+- grid-auto-flow: dense fits pictures that get out of position because of span, it fills holes created/moves.
+
+- with grid-template-column you can set 6 columns and make an explicit width etc but for responsive design, changing it to: repeat(auto-fit, minmax (#px, #fr) it will auto size things to fit the change of the viewport. 
+
+*/
